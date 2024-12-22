@@ -1,0 +1,12 @@
+[Unit]
+Description=Directory Change Monitor Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/kali/bsm/directory_checker.py
+Restart=always
+User=root
+WorkingDirectory=/home/kali
+
+[Install]
+WantedBy=multi-user.target
